@@ -139,9 +139,49 @@
         <a href="map.html">Как нас найти?</a><br>
         Телефон: +7 (812) 666-02-66
         </p>
-		
-		
+        <div class="footer-social">
+            <b>Давайте дружить!</b>
+            <ul>
+                <li><a class="social-button" href="#">Вконтакте</a></li>
+                <li><a class="social-button" href="#">Фэйсбук</a></li>
+                <li><a class="social-button" href="#">Инстаграмм</a></li>
+            </ul>
+        </div>
+        <p class="footer-copyright">
+            <b>Разработано:</b>
+            <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
+        </p>
+
 	</footer>
+
+    <section class="modal modal-login">
+
+        <h2>Личный кабинет</h2>
+
+        <p>Введите свой логин и пароль.</p>
+        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+            <p>
+                <input class="login-icon-user" type="text" name="login" placeholder="Логин">
+            </p>
+            <p>
+                <input class="login-icon-password" type="password" name="password" placeholder="Пароль">
+            </p>
+            <p class="login-password-info">
+                <input type="checkbox" name="remember" class="visually-hidden">
+                Запомните меня
+                <a class="restore" href="#">Я забыл пароль!</a>
+            </p>
+            <button class="button" type="submit">Войти</button>
+        </form>
+
+        <span class="modal-close">x</span>
+
+    </section>
+
+    <section class="modal modal-map">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <span class="modal-close">x</span>
+    </section>
 	
 		
 </body>
