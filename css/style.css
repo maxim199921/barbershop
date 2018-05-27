@@ -1,0 +1,32 @@
+body {
+
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+    font-weight: normal;
+    font-family: Myriad Pro;
+
+    background: url("../img/tint.jpg") no-repeat;
+    -moz-background-size: 100%;
+    -webkit-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+}
+
+.h2 {
+    font-size: 30px;
+    line-height: 42px;
+    color: #000000;
+}
+
+.h3 {
+    font-size: 24px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.h3-1 {
+    font-size: 30px;
+    line-height: 42px;
+    color: #f7f4f1;
+}

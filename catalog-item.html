@@ -2,38 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>item</title>
+    <title>-catalog-item</title>
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 
     <header class="main-header">
         <nav class="main-navigation">
-            <img src="img/index-logo.svg" width="368" height="153" alt="логотип Барбершопа 'Бородинский'">
+            <a class="main-header-logo" href="index.html">
+                <img src="img/logo.svg" width="111" height="24" alt="Логотип барбершопа «Бородинский»">
+            </a>
 
             <ul class="site-navigation">
                 <li><a href="info.html">Информация</a></li>
                 <li><a href="news.html">Новости</a></li>
                 <li><a href="price.html">Прайс-лист</a></li>
-                <li><a href="catalog.html">Магазин</a></li>
+                <li class="site-navigation-current"><a href="catalog.html">Магазин</a></li>
                 <li><a href="contacts.html">Контакты</a></li>
             </ul>
 
             <ul class="user-navigation">
-                <li class="login-link">Вход</li>
+                <li class="login-link"><img src="img/login.svg" id="login" width="14" height="14" alt="login">Вход</li>
             </ul>
         </nav>
     </header>
 
     <main class="container">
 
-        <h1 class="page-title">НАБОР ДЛЯ ПУТЕШЕСТВИЙ "BAXTER OF CALIFORNIA"</h1>
+        <h1 class="h2 page-title">НАБОР ДЛЯ ПУТЕШЕСТВИЙ "BAXTER OF CALIFORNIA"</h1>
 
         <section class="breadcrumbs">
 
             <ul class="item-navigation">
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="#">Магазин</a></li>
-                <li><a href="#">Средства для ухода</a></li>
+                <li><a href="index.html">Главная<img src="img/shapeblack.svg" width="11" height="11" alt="shapblack"></a></li>
+                <li><a href="catalog.html">Магазин<img src="img/shapeblack.svg" width="11" height="11" alt="shapblack"></a></li>
+                <li><a href="catalog-item.html">Средства для ухода<img src="img/shapeblack.svg" width="11" height="11" alt="shapblack"></a></li>
                 <li class="breadcrumbs-current">НАБОР ДЛЯ ПУТЕШЕСТВИЙ "BAXTER OF CALIFORNIA"</li>
             </ul>
 
@@ -45,19 +48,18 @@
 
                 <h2 class="visually-hidden">изображение товара</h2>
                 <p class="product-photo-full">
-                    <img src="img/product-big.jpg" width="460" height="498" alt="фото всего набора">
+                    <img src="img/item1.jpg" width="460" height="498" alt="фото всего набора">
                 </p>
                 <ul class="product-photo-preview">
-                    <li><img src="img/product-small-1.jpg" width="140" height="149" alt="фото в анфас"></li>
-                    <li><img src="img/product-small-2.jpg" width="140" height="149" alt="фото в профиль"></li>
-                    <li><img src="img/product-small-3.jpg" width="140" height="149" alt="фото отдельной части"></li>
+                    <li><img src="img/item2.jpg" width="140" height="149" alt="фото в анфас"></li>
+                    <li><img src="img/item3.jpg" width="140" height="149" alt="фото в профиль"></li>
+                    <li><img src="img/item4.jpg" width="140" height="149" alt="фото отдельной части"></li>
                 </ul>
+            </div>
 
         </section>
 
         <section>
-
-            <h3>Есть в наличии артикул:DEXTER-AE</h3>
 
             <h2 class="visually-hidden">описание товара</h2>
             <p class="product-availability">Есть в наличии</p>
@@ -69,14 +71,14 @@
                 <a class="button" href="#">Купить</a>
             </p>
 
-            <h3>В набор входят:</h3>
+            <h3 class="h3">В набор входят:</h3>
 
             <ul>
-                <li>средство</li>
-                <li>увлажняющий крем</li>
-                <li>крем для бриться</li>
-                <li>крем после бриться</li>
-                <li>косметика</li>
+                <li><img src="img/shapeblack.svg" width="11" height="11" alt="shapblack">средство</li>
+                <li><img src="img/shapeblack.svg" width="11" height="11" alt="shapblack">увлажняющий крем</li>
+                <li><img src="img/shapeblack.svg" width="11" height="11" alt="shapblack">крем для бриться</li>
+                <li><img src="img/shapeblack.svg" width="11" height="11" alt="shapblack">крем после бриться</li>
+                <li><img src="img/shapeblack.svg" width="11" height="11" alt="shapblack">косметика</li>
             </ul>
 
         </section>
@@ -95,9 +97,9 @@
         <div class="footer-social">
             <b>Давайте дружить!</b>
             <ul>
-                <li><a class="social-button" href="#">Вконтакте</a></li>
-                <li><a class="social-button" href="#">Фэйсбук</a></li>
-                <li><a class="social-button" href="#">Инстаграмм</a></li>
+                <li><a class="social-button" href="#"><img src="img/vk.svg" width="27" height="15" alt="vk">Вконтакте</a></li>
+                <li><a class="social-button" href="#"><img src="img/facebook.svg" width="11" height="22" alt="facebook">Фэйсбук</a></li>
+                <li><a class="social-button" href="#"><img src="img/instagram.svg" width="20" height="20" alt="instagram">Инстаграмм</a></li>
             </ul>
         </div>
         <p class="footer-copyright">
