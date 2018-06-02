@@ -6,7 +6,7 @@ body {
     font-weight: normal;
     font-family: Myriad Pro;
 
-    background: url("../img/tint.jpg") no-repeat;
+    ackground: url("../img/tint.jpg") no-repeat;
     -moz-background-size: 100%;
     -webkit-background-size: 100%;
     -o-background-size: 100%;
@@ -29,4 +29,15 @@ body {
     font-size: 30px;
     line-height: 42px;
     color: #f7f4f1;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding:0 !important;
+    border:0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
 }
