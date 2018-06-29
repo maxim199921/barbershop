@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>catalog</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
+<body class="iner-page">
 
     <header class="main-header">
     <nav class="main-navigation">
@@ -33,13 +35,17 @@
 
     <main class="container">
 
-        <h1 class="h2 page-title">СРЕДСТВО ДЛЯ УХОДА</h1>
+        <h1>СРЕДСТВО ДЛЯ УХОДА</h1>
 
-        <ul class="breadcrumbs">
-            <li><a href="index.html">Главная<img src="img/shapeblack.svg" width="11" height="11" alt="shapblack"></a></li>
-            <li><a href="catalog.html">Магазин<img src="img/shapeblack.svg" width="11" height="11" alt="shapblack"></a></li>
-            <li class="breadcrumbs-current"></li>
-        </ul>
+        <section class="breadcrumbs">
+            <ul class="item-navigation">
+
+                <li><a href="index.html">Главная<img src="img/shapeblack.svg" width="11" height="11" alt="shapblack"></a></li>
+                <li><a href="catalog.html">Магазин<img src="img/shapeblack.svg" width="11" height="11" alt="shapblack"></a></li>
+                <li class="breadcrumbs-current">средства для ухода</li>
+
+            </ul>
+        </section>
 
         <section class="filters">
             <h2 class="visually-hidden">ФИЛЬТРЫ</h2>
@@ -100,13 +106,14 @@
             <ul class="catalog-list">
                 <li class="catalog-item">
                     <a href="catalog-item.html">
-                        <h3>
-                            <span class="catalog-category">Набор для путешествий</span>
-                            <span class="catalog-item-title">"Baxter of California"</span>
-                        </h3>
                         <p class="catalog-item-image">
                             <img src="img/catalog1.jpg" width="220" height="165" alt="Набор для путешествий Baxter of California">
                         </p>
+                        <h3>
+                            <span class="catalog-category">Набор для путешествий<br></span>
+                            <span class="catalog-item-title">"Baxter of California"</span>
+                        </h3>
+
                     </a>
                     <p class="catalog-item-price">
                         <b>2 900 $</b>
@@ -115,13 +122,13 @@
                 </li>
                 <li class="catalog-item">
                     <a href="catalog-item.html">
-                        <h3>
-                            <span class="catalog-category">Увлажняющий кондиционер</span>
-                            <span class="catalog-item-title">"Baxter of California"</span>
-                        </h3>
                         <p class="catalog-item-image">
                             <img src="img/catalog2.jpg" width="220" height="165" alt="Увлажняющий кондиционер Baxter of California">
                         </p>
+                        <h3>
+                            <span class="catalog-category">Увлажняющий кондиционер<br></span>
+                            <span class="catalog-item-title">"Baxter of California"</span>
+                        </h3>
                     </a>
                     <p class="catalog-item-price">
                         <b>750 $</b>
@@ -130,13 +137,13 @@
                 </li>
                 <li class="catalog-item">
                     <a href="catalog-item.html">
-                        <h3>
-                            <span class="catalog-category">Гель для волос</span>
-                            <span class="catalog-item-title">"Suavecito"</span>
-                        </h3>
                         <p class="catalog-item-image">
                             <img src="img/catalog3.jpg" width="220" height="165" alt="Гель для волос Suavecito">
                         </p>
+                        <h3>
+                            <span class="catalog-category">Гель для волос<br></span>
+                            <span class="catalog-item-title">"Suavecito"</span>
+                        </h3>
                     </a>
                     <p class="catalog-item-price">
                         <b>290 $</b>
@@ -145,13 +152,13 @@
                 </li>
                 <li class="catalog-item">
                     <a href="catalog-item.html">
-                        <h3>
-                            <span class="catalog-category">Глина для укладки волос</span>
-                            <span class="catalog-item-title">American crew</span>
-                        </h3>
                         <p class="catalog-item-image">
                             <img src="img/catalog4.jpg" width="220" height="165" alt="Глина для укладки волос American crew">
                         </p>
+                        <h3>
+                            <span class="catalog-category">Глина для укладки волос<br></span>
+                            <span class="catalog-item-title">American crew</span>
+                        </h3>
                     </a>
                     <p class="catalog-item-price">
                         <b>500 $</b>
@@ -160,13 +167,13 @@
                 </li>
                 <li class="catalog-item">
                     <a href="catalog-item.html">
-                        <h3>
-                            <span class="catalog-category">Гель для волос</span>
-                            <span class="catalog-item-title">American crew</span>
-                        </h3>
                         <p class="catalog-item-image">
                             <img src="img/catalog5.jpg" width="220" height="165" alt="Гель для волос American crew">
                         </p>
+                        <h3>
+                            <span class="catalog-category">Гель для волос<br></span>
+                            <span class="catalog-item-title">American crew</span>
+                        </h3>
                     </a>
                     <p class="catalog-item-price">
                         <b>300 $</b>
@@ -175,13 +182,13 @@
                 </li>
                 <li class="catalog-item">
                     <a href="catalog-item.html">
-                        <h3>
-                            <span class="catalog-category">Набор для бритья</span>
-                            <span class="catalog-item-title">Baxter of California</span>
-                        </h3>
                         <p class="catalog-item-image">
                             <img src="img/catalog6.jpg" width="220" height="165" alt="Набор для бритья Baxter of California">
                         </p>
+                        <h3>
+                            <span class="catalog-category">Набор для бритья<br></span>
+                            <span class="catalog-item-title">Baxter of California</span>
+                        </h3>
                     </a>
                     <p class="catalog-item-price">
                         <b>3 900 $</b>
