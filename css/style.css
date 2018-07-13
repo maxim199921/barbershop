@@ -28,6 +28,29 @@ body {
 
 }
 
+.breadcrumbs {
+    margin-bottom: 57px;
+}
+
+.main-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.filters {
+    width: 200px;
+    margin: 0;
+    padding: 0;
+}
+
+.catalog {
+    width: 730px;
+    margin: 0;
+    padding: 0;
+}
+
 .breadcrumbs a {
     color: #000000;
 }
@@ -75,12 +98,34 @@ body {
     opacity: 0.5;
 }
 
+.catalog-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
 .catalog ul {
     list-style: none;
 }
 
 .catalog-item {
+    width: 220px;
+    min-height: 286px;
+    margin-right: 20px;
+    margin-bottom: 20px;
     box-shadow: 0 0 15px rgba(0,1,1,0.2);
+}
+
+.pagination-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.pagination-list li {
+    width: 43px;
+    height: 43px;
 }
 
 .catalog-item:hover {
@@ -144,12 +189,36 @@ body {
 
 /*начало стилизации catalog-item.html*/
 
+.product-info {
+    width: 400px;
+}
+
+.item-navigation {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.item-navigation li {
+    margin-right: 40px;
+}
+
+.item-visual {
+    width: 460px;
+    min-height: 670px;
+}
 
 .product-photo-full {
     box-shadow: 0 0 15px rgba(0,1,1,0.2);
+    margin-bottom: 20px;
+    padding: 0;
 }
 
 .product-photo-preview {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
@@ -182,9 +251,15 @@ a {
     text-decoration: none;
 }
 
-
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 .button {
+    display: inline-block;
+    padding: 10px 30px;
+    margin-right: 16px;
     font: inherit;
 
     text-align: center;
@@ -200,6 +275,13 @@ a {
 .button:focus,
 .button:active {
     background-color: #663d15;
+}
+
+.button.disabled,
+.button:disabled {
+    cursor: default;
+    opacity: 0.5;
+    background-color: #000000;
 }
 
 .main-header {
@@ -233,7 +315,7 @@ a {
 
 .main-navigation-wrapper {
     width: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 58px;
 
     background-color: #000000;
 }
@@ -246,21 +328,58 @@ a {
 .container-header {
     width: 940px;
     margin: 0 auto;
-    padding: 26px 28px;
+    padding: 0;
 }
 
 .site-navigation {
     display: flex;
-    justify-content: space-around;
-    width: 620px;
+    flex-wrap: wrap;
+    width: 700px;
 }
 
 .user-navigation {
-    width: 140px;
+    display: flex;
+    max-width: 140px;
+}
+
+.user-navigation .login-link {
+    position: relative;
+    padding-left: 50px;
+}
+
+.login-link::before {
+    content: "";
+
+    top: 27px;
+    left: 24px;
+
+    position: absolute;
+    width: 16px;
+    height: 18px;
+
+    background-image: url("../img/login.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    opacity: 0.3;
+}
+
+.login-link:hover::before,
+.login-link:focus::before,
+.login-link:active::before {
+    opacity: 1;
+}
+
+.site-navigation img {
+    display: block;
+    padding: 0;
+    margin-top: -4px;
 }
 
 .site-navigation a,
 .user-navigation a {
+    display: block;
+    padding: 25px 20px;
     color: #ffffff;
 }
 
@@ -290,13 +409,37 @@ a {
 }
 
 .features-item {
+    position: relative;
     width: 300px;
     text-align: center;
 }
 
+.features-item::before {
+    content: "";
+
+    left: 140px;
+    top: 55px;
+
+    position: absolute;
+    width: 20px;
+    height: 20px;
+
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    transform: rotate(45deg);
+}
+
 .features-item h3 {
+    margin: 0;
+    margin-bottom: 60px;
     font-size: 30px;
     line-height: 42px;
+}
+
+.features-item p {
+    margin: 0 10px;
 }
 
 .index-colums {
@@ -308,9 +451,11 @@ a {
     color: #000000;
 
     background-color: #faf7f4;
-    background-image: url("../img/background-white.jpg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
+    background-image:
+            url("../img/line.png");
+            url("../img/background-white.jpg");
+    background-position: center, 0 0;
+    background-repeat: no-repeat, repeat;
 }
 
 .news {
@@ -322,21 +467,114 @@ a {
 }
 
 .index-colums h2 {
+    margin: 0;
+    margin-bottom: 25px;
     font-size: 30px;
     line-height: 42px;
 }
 
 .news-list {
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 0;
     list-style: none;
+}
+
+.news-item {
+    margin-bottom: 25px;
+}
+
+.news-item p {
+    margin: 0;
 }
 
 .news-item time {
     text-transform: none;
 }
 
+.contacts {
+    width: 380px;
+}
+
+.contacts p {
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.appointment {
+    width: 300px;
+}
+
+.appointment-info {
+    margin: 0;
+    margin-bottom: 15px;
+    width: 270px;
+}
+
+.appointment-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.appointment-item {
+    width: 140px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.appointment-form label {
+    display: block;
+    margin-bottom: 9px;
+    margin-left: 15px;
+}
+
+.appointment-form input {
+    box-sizing: border-box;
+    width: 140px;
+    padding: 8px 15px;
+}
+
+.appointment-form button {
+    margin: 0;
+    margin-top: 10px;
+    width: 100%;
+}
+
 .gallery-content {
+    height: 164px;
+    margin: 0;
+
     background-color: #cccccc;
     border: 7px solid #ffffff;
+}
+
+.gallery-content img {
+    width: 284px;
+    height: 164px;
+}
+
+.gallery-container {
+    position: relative;
+
+    height: 260px;
+}
+
+.gallery-button {
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+
+    width: 140px;
+    margin: 0;
+}
+
+.gallery-button-back {
+    left: 0;
+}
+
+.gallery-button-right {
+    right: 0;
 }
 
 .appointment-item input {
@@ -353,6 +591,19 @@ a {
 
 .main-footer {
     margin-top: 65px;
+    padding-top: 60px;
+    padding-bottom: 44px;
+
+
+    color: #ffffff;
+
+    background-color: #222222;
+    background-image: url("../img/background-black.jpg");
+    background-repeat: repeat;
+}
+
+.main-footer-2 {
+    margin-top: 49px;
     padding: 60px 0;
 
 
@@ -363,8 +614,6 @@ a {
     background-repeat: repeat;
 }
 
-
-
 .container-footer  {
     display: flex;
     width: 940px;
@@ -373,11 +622,38 @@ a {
 
 .social-main {
     display: flex;
+    text-align: center;
     justify-content: space-around;
+    width: 143px;
+    padding: 0;
+    margin: 0;
+    margin-left: 35px;
+}
+
+.social-background {
+    width: 44px;
+    height: 44px;
+    background-color: black;
+}
+
+.social-background:hover,
+.social-background:focus {
+    background-color: #ffffff;
+}
+
+.social-button:hover path,
+.social-button:focus path {
+    fill: #000000;
+}
+
+.social-button{
+    display: block;
+    vertical-align: center;
+    padding: 10px;
 }
 
 .footer-contacts {
-    width: 320px;
+    width: 280px;
     margin: 0;
     margin-right: 80px;
 }
@@ -400,16 +676,28 @@ a {
     list-style: none;
 }
 
+.freind {
+    width: 150px;
+    margin: 0;
+    margin-bottom: 10px;
+    margin-left: 55px;
+}
+
 .social-button {
     color: #ffffff;
 }
 
 .footer-copyright {
-    width: 150px;
+    width: 160px;
     margin: 0;
     margin-left: auto;
 
     text-align: center;
+}
+
+.footer-copyright a {
+    margin-top: 10px;
+    margin-right: 0;
 }
 
 .footer-copyright .button:hover,
@@ -419,13 +707,95 @@ a {
     background-color: #ffffff;
 }
 
+
+/* ВСПЛЫВАЮЩИЕ ОКНА*/
 .modal {
+    position: fixed;
+
+    display: none;
+
     color: #000000;
 
     background-color: #fbf8f5;
     background-image: url("../img/background-white.jpg");
     background-position: 0 0;
     background-repeat: repeat;
+    box-shadow: 0 30px 200px rgba(0,0,0,0.8);
+}
+
+.modal-login {
+    top: 120px;
+    left: 50%;
+
+    width: 300px;
+    padding: 50px 80px;
+    margin-left: -230px;
+
+    display: none;
+}
+
+.modal-close {
+    position: absolute;
+    content: "";
+    left: 490px;
+    top: 0px;
+    width: 22px;
+    height: 22px;
+    font-size: 0;
+    background: transparent;
+    cursor: pointer;
+    border: 0;
+}
+
+.modal-close-map {
+    position: absolute;
+    content: "";
+    left: 790px;
+    top: -10px;
+    width: 22px;
+    height: 22px;
+    font-size: 0;
+    background: transparent;
+    cursor: pointer;
+    border: 0;
+}
+
+.modal-close-map::before,
+.modal-close-map::after {
+    content: "";
+    position: absolute;
+
+    left: 0px;
+    width: 19px;
+    height: 3px;
+    background-color: #ffffff;
+}
+
+.modal-close-map::before {
+    transform: rotate(45deg);
+}
+
+.modal-close-map::after {
+    transform: rotate(-45deg);
+}
+
+.modal-close::before,
+.modal-close::after {
+    content: "";
+    position: absolute;
+
+    left: 0px;
+    width: 19px;
+    height: 3px;
+    background-color: #ffffff;
+}
+
+.modal-close::before {
+    transform: rotate(45deg);
+}
+
+.modal-close::after {
+    transform: rotate(-45deg);
 }
 
 .modal h2 {
@@ -435,6 +805,11 @@ a {
 
 .login-form input[type="text"],
 .login-form input[type="password"] {
+    box-sizing: border-box;
+    width: 300px;
+    padding: 10px 15px;
+    padding-right: 40px;
+
     font: inherit;
     color: #000000;
     text-transform: uppercase;
@@ -445,6 +820,74 @@ a {
 
 .login-form input:focus {
     border-color: #663d15;
+}
+
+.login-icon-user {
+    background-image: url("../img/user.svg");
+    background-position: 270px center;
+    background-repeat: no-repeat;
+}
+
+.login-icon-password {
+    background-image: url("../img/lock.svg");
+    background-position: 270px center;
+    background-repeat: no-repeat;
+}
+
+.login-form .login-help {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.login-checkbox {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.login-checkbox input[type="checkbox"] + .checkbox-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 17px;
+    height: 17px;
+
+    border: 2px solid #000000;
+}
+
+.login-checkbox input[type="checkbox"]:focus + .checkbox-indicator {
+    border-color: #663d15;
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before,
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+    content: "";
+
+    position: absolute;
+    top: 8px;
+    left: 1px;
+
+    width: 15px;
+    height: 2px;
+
+    background-color: #000000;
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
+    transform: rotate(45deg);
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+    transform: rotate(-45deg);
+}
+
+.login-form button {
+    width: 100%;
 }
 
 .login-chechbox:hover,
@@ -462,13 +905,94 @@ a {
     text-decoration: none;
 }
 
-.visually-hidden {
-    position: absolute !important;
-    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-    clip: rect(1px, 1px, 1px, 1px);
-    padding:0 !important;
-    border:0 !important;
-    height: 1px !important;
-    width: 1px !important;
+.modal-map {
+    display: none;
+
+    top: 50%;
+    left: 50%;
+
+    width: 766px;
+    height: 561px;
+    margin-top: -280px;
+    margin-left: -390px;
+
+    border: 7px solid white;
+}
+
+.modal-map p {
+    margin: 0;
+}
+
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-2000px);
+    }
+
+    70% {
+        transform: translateY(30px);
+    }
+
+    90% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
+}
+
+.modal-show {
+    display: block;
+
+    animation: bounce 1s;
+}
+
+.modal-error {
+    animation: shake 0.6s;
+}
+
+/* ВСПЛЫВАЮЩИЕ ОКНА*/
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+
+
